@@ -1,0 +1,8 @@
+.slider{
+   background-color: black;
+}
+.image{
+    width: 1400px;
+    height: 500px;
+    object-fit: cover;
+}
