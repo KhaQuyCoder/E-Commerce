@@ -6,7 +6,9 @@ import { State } from "../../../state/ManagerState";
 import { useContext, useState } from "react";
 
 function BasicExample() {
-  const dataOshi = useFetchData("http://localhost:5280/oshi");
+  const dataOshi = useFetchData(
+    "https://674165bde4647499008d9332.mockapi.io/oshi/oshi"
+  );
   const { countHeart, setCountHeart, countCart, setCountCart } =
     useContext(State);
   const [loading, setLoading] = useState(Array(dataOshi.length).fill(false));
