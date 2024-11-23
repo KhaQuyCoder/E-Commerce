@@ -1,0 +1,43 @@
+.form-login{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 120px;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"],
+.form-login button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  border-radius: 20px;
+}
+
+.form-login p {
+    margin: 20px 10px 5px;
+    font-size: 14px;
+    color: #333;
+  }
+.form-login button[type="submit"]{
+    margin-top: 20px;
+    background-color: #00A459;
+    color: #fff;
+    font-weight: 500;
+}
+  
+.form-login input[type="text"]:focus,
+.form-login input[type="password"]:focus {
+    border-color: #00A459;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

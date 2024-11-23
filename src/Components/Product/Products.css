@@ -1,28 +1,66 @@
-.container{
+.container-product{
     width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
+    margin-top: 100px;
 }
-.hover{
-    height: 370px;
+.wraper-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
 }
-.col{
-    margin-top: 20px;
+.fruit{
+    grid-column: span 2 / span 2;
+    overflow: hidden;
+    position: relative;
 }
-.title{
-    width: 100%; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+
+.milktea {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    overflow: hidden;
+    position: relative;
+
 }
-.img{
-    object-fit: contain;
-    width: auto;
-    height: 200px;
+.milkFruit {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    overflow: hidden;
+    position: relative;
+
 }
-.hover:hover > .img{
-    transform: scale(1.2);
-    transition: 0.3s ease;
+
+.oshi {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    overflow: hidden;
+    position: relative;
+  
 }
-.hover:hover{
-    border-color: forestgreen;
+
+.fruitimg,.milkFruitimg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
+.milkteaimg,
+.oshiimg
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+.fruitimg:hover,
+.milkteaimg:hover,
+.milkFruitimg:hover,
+.oshiimg:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+

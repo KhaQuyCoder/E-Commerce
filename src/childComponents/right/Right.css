@@ -1,0 +1,16 @@
+
+
+.wraper-right{
+    display: flex;
+    overflow: hidden;
+}
+.image-right{
+    width: 100%;
+    border-radius: 10px;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+.image-right.fade {
+    opacity: 0; /* Starts fading out */
+  }

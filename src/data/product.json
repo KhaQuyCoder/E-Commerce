@@ -1,0 +1,130 @@
+{
+    "oshi":[
+        {
+            "id":"1",
+            "name":"Tater Thins Vị Tảo Biển",
+            "weight":"32g/68g",
+            "description":"Khoai tây thế hệ mới với độ mỏng chỉ 2.3mm đã xuất hiệ Tater Thins không những thỏa mãn cơn thèm khoai tây mà còn mang đến trải nghiệm mê đắm đầy bất ngờ với từng lát bánh giòn tan.",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/5uqr98b7oTS1tKA3hmqi.png",
+            "coin":"9.000vnd",
+            "sale":"-12%",
+            "start":"4"
+        },
+        {
+            "id":"2",
+            "name":"Snack Viên Vị Mực Cay",
+            "weight":"32g/68g",
+            "description":"Khoai tây thế hệ mới với độ mỏng chỉ 2.3mm đã xuất hiệ Tater Thins không những thỏa mãn cơn thèm khoai tây mà còn mang đến trải nghiệm mê đắm đầy bất ngờ với từng lát bánh giòn tan.",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/6RWTBYN4C9z5YUbFvuQ2.png",
+            "coin":"9.000vnd",
+            "sale":"false",
+            "start":"3"
+
+        },
+        {
+            "id":"3",
+            "name":"Snack Hành",
+            "weight":"6g/12g/32g/68g",
+            "description":"Snack hành tràn đầy hương vị tươi ngon, tròn tròn giòn tan mang lại trải nghiệm thú vị.",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/ahReFKuJgWhjtw8xoZ9r.png",
+            "coin":"9.000vnd",
+            "sale":"false",
+            "start":"5"
+
+        },
+        {
+            "id":"4",
+            "name":"Snack Pho Mát Miếng",
+            "weight":"6g/12g/32g/68g",
+            "description":"Snack phô mát miếng tuyệt vời nhất theo thời gian.",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/dHPaEGeJ4q6JekZ8ZoWY.png",
+            "coin":"9.000vnd",
+            "sale":"-5%",
+            "start":"4"
+
+        },
+        {
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },
+        {
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        },{
+            "id":"5",
+            "name":"Snack Bắp Ngọt",
+            "weight":"6g/12g/32g/68g",
+            "description":"Được làm từ bắp thật thơm ngon, Oishi Snack Bắp biến thói quen của trẻ thành những niềm vui trọn vẹn!",
+            "image":"https://oishi.cdn.vccloud.vn/storage/products/September2023/GofNo8iqZ5uo9KwB2LA0.png",
+            "coin":"9.000vnd",
+            "sale":"-10%",
+            "start":"4"
+
+        }
+
+    ]
+}

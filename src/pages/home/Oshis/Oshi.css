@@ -1,0 +1,90 @@
+.wraper-oshi{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.item-oshi{
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #EFEFEF;
+}
+.item-oshi:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.item-oshi:hover  .sale-oshi{
+    display: block;
+}
+.des-oshi{
+    height: 50px;
+    overflow: hidden;
+}
+.coin-oshi{
+    color: green;
+}
+.star-oshi{
+    color:#F7A92F;
+}
+.buy-btn-oshi{
+    background-color: #00A459 ;
+    border: none;
+}
+.buy-btn-oshi:hover{
+    background-color: #4E2295 ;
+}
+.image-oshi{
+    width: 150px;
+    display: flex;
+}
+.sale-oshi,.heart-oshi {
+    position: absolute;
+    top: 12%;
+    right:10px;
+    font-size: 15px;
+    background-color: #00A459;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    color: #ffffff;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transform: translateX(calc(100% + 10px));
+    transition: 0.2s linear;
+}
+.heart-oshi{
+    top: 22%;
+    font-size: 20px;
+    background-color: #4E2295;
+    color: #fff;
+}
+.theme-heart{
+    color: #EA284E;
+}
+
+.item-oshi:hover .sale-oshi {
+    display: flex; 
+    transform: translateX(0);
+}
+.item-oshi:hover .heart-oshi {
+    display: flex; 
+    transform: translateX(0);
+}
+.cart-btn-oshi{
+    background-color: #4E2295;
+    border: none;
+    margin-left: 20px;
+}
+.fa-spinner{
+    font-size: 15px;
+    animation: rotateSpin 2s linear  infinite;
+}
+
+@keyframes rotateSpin {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

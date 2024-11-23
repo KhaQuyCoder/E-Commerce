@@ -1,0 +1,68 @@
+
+.btn-show{
+    font-size: 1.5rem;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid green;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 10px;
+    background-color: #101089;
+}
+.btn-show:hover{
+    background-color: #101089;
+    border-color: green;
+}
+
+.styled-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  .styled-form label {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .styled-form p {
+    margin: 0 10px 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .styled-form input[type="text"],
+  .styled-form input[type="password"],
+  .styled-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    border-radius: 20px;
+  }
+  .styled-form button[type="submit"]{
+    margin-top: 20px;
+    background-color: #00A459;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .styled-form input[type="text"]:focus,
+  .styled-form input[type="password"]:focus {
+    border-color: #00A459;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  

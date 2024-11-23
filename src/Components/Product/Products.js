@@ -1,32 +1,50 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React from "react";
 import "./Products.css";
-import { useFetchData } from "../../FetchApi/useFetchData ";
-
-function Products() {
-  const data = useFetchData();
+import { Link } from "react-router-dom";
+const Products = () => {
+  const product = [
+    {
+      clasN: "fruit",
+      clasNimage: "fruitimg",
+      url: "/Fruit",
+      image:
+        "https://png.pngtree.com/thumb_back/fw800/background/20240509/pngtree-fresh-fruit-3d-ai-background-image_15727754.jpg",
+    },
+    {
+      clasN: "milktea",
+      url: "/MilkFruit",
+      clasNimage: "milkteaimg",
+      image:
+        "https://i.pinimg.com/736x/01/60/0e/01600e31ccea2ac6c2bb863de834cb52.jpg",
+    },
+    {
+      clasN: "milkFruit",
+      url: "/Oshi",
+      clasNimage: "milkFruitimg",
+      image:
+        "https://www.arena-multimedia.vn/wp-content/uploads/2023/09/document61.png",
+    },
+    {
+      clasN: "oshi",
+      url: "/Milktea",
+      clasNimage: "oshiimg",
+      image:
+        "https://i.pinimg.com/736x/d1/d8/56/d1d856edc5a51d4895e028cf63037408.jpg",
+    },
+  ];
   return (
-    <Container className="container d-flex justify-content-center">
-      <Row style={{ marginTop: 120 }}>
-        {data.map((item, index) => (
-          <Col xl={3} key={index} className="col">
-            <Card style={{ width: "18rem" }} className="hover">
-              <Card.Img variant="top" src={item.image} className="img" />
-              <Card.Body>
-                <Card.Title className="title">{item.title}</Card.Title>
-                <Card.Text>lorem</Card.Text>
-                <div>{item.price} USE</div>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+    <div className="container-product">
+      <div className="wraper-product">
+        {product.map((item, index) => (
+          <div key={index} className={item.clasN}>
+            <Link to={item.url}>
+              <img className={item.clasNimage} src={item.image} alt={index} />
+            </Link>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
-}
+};
 
 export default Products;
