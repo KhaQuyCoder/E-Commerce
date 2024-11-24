@@ -57,7 +57,11 @@ function Header() {
             ></i>
           </div>
 
-          <img className="logo-mobile" src={logoMobile} alt="logo" />
+          <img
+            className="logo-mobile"
+            src="https://nov-petalia.myshopify.com/cdn/shop/files/logo_190x.png?v=1700036607"
+            alt="logo"
+          />
 
           <div>
             <i
