@@ -1,42 +1,43 @@
-.wraper-oshi{
+.wraper-products{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.item-oshi{
+.item-product{
     cursor: pointer;
     overflow: hidden;
     background-color: #EFEFEF;
 }
-.item-oshi:hover{
+.item-product:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.item-oshi:hover  .sale-oshi{
+.item-product:hover  .sale-product{
     display: block;
 }
-.des-oshi{
+.des-product{
     height: 50px;
     overflow: hidden;
 }
-.coin-oshi{
+.coin-product{
     color: green;
 }
-.star-oshi{
+.star-product{
     color:#F7A92F;
 }
-.buy-btn-oshi{
+.buy-btn-product{
     background-color: #00A459 ;
     border: none;
 }
-.buy-btn-oshi:hover{
+.buy-btn-product:hover{
     background-color: #4E2295 ;
 }
-.image-oshi{
+.image-product{
     width: 150px;
+    height: 200px;
     display: flex;
 }
-.sale-oshi,.heart-oshi {
+.sale-product,.heart-product {
     position: absolute;
     top: 12%;
     right:10px;
@@ -52,7 +53,7 @@
     transform: translateX(calc(100% + 10px));
     transition: 0.2s linear;
 }
-.heart-oshi{
+.heart-product{
     top: 22%;
     font-size: 20px;
     background-color: #4E2295;
@@ -62,15 +63,15 @@
     color: #EA284E;
 }
 
-.item-oshi:hover .sale-oshi {
+.item-product:hover .sale-product {
     display: flex; 
     transform: translateX(0);
 }
-.item-oshi:hover .heart-oshi {
+.item-product:hover .heart-product {
     display: flex; 
     transform: translateX(0);
 }
-.cart-btn-oshi{
+.cart-btn-product{
     background-color: #4E2295;
     border: none;
     margin-left: 20px;
@@ -78,6 +79,11 @@
 .fa-spinner{
     font-size: 15px;
     animation: rotateSpin 2s linear  infinite;
+}
+.name-product{
+    width: 100%;
+    margin-bottom: 30px;
+    height: 30px;
 }
 
 @keyframes rotateSpin {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import "../../reponsive/Reponsive.css";
 import logo from "../../assets/logofooter.avif";
 const Footer = () => {
   const help = [

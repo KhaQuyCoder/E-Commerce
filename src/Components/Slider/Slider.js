@@ -1,5 +1,6 @@
 import React from "react";
 import "./Slider.css";
+import "../../reponsive/Reponsive.css";
 import Left from "../../childComponents/left/Left";
 import Right from "../../childComponents/right/Right";
 const SliderComponent = () => {

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Products.css";
+import "../../reponsive/Reponsive.css";
 import { Link } from "react-router-dom";
+
 const Products = () => {
   const product = [
     {

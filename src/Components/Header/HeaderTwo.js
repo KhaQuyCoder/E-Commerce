@@ -1,8 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { Tooltip } from "react-tippy";
 import { Link } from "react-router-dom";
-import Left from "../../childComponents/left/Left";
 const HeaderTwo = () => {
   return (
     <div className="header-option">

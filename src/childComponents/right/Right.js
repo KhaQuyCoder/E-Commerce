@@ -5,6 +5,7 @@ import milkfruit from "../../assets/2.jpg";
 import fruit from "../../assets/fruit.jpg";
 
 import "./Right.css";
+import "../../reponsive/Reponsive.css";
 
 const Right = () => {
   const imageUrl = [milkTea, milkfruit, fruit, oshi];
@@ -13,11 +14,11 @@ const Right = () => {
 
   useEffect(() => {
     const sliders = setInterval(() => {
-      setFade(true); // Trigger fade effect
+      setFade(true);
       setTimeout(() => {
         setIndex((prevIndex) => (prevIndex + 1) % imageUrl.length);
-        setFade(false); // Remove fade effect after the transition
-      }, 500); // Match the duration of the fade animation
+        setFade(false);
+      }, 500);
     }, 3000);
 
     return () => {

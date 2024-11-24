@@ -1,5 +1,3 @@
-
-
 .wraper-right{
     display: flex;
     overflow: hidden;
@@ -12,5 +10,5 @@
     transition: opacity 0.5s ease-in-out;
 }
 .image-right.fade {
-    opacity: 0; /* Starts fading out */
+    opacity: 0; 
   }

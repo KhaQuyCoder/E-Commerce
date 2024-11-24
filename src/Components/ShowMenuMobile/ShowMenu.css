@@ -1,0 +1,49 @@
+.btn-showMeunu{
+   transform: translateY(5px);
+   cursor: pointer;
+}
+.option-showMenu{
+   display: flex;
+   padding-left: 0;
+   flex-direction: column;
+}
+.home,
+.collections,
+.products,
+.OtherPages,
+.Blog{
+   text-decoration: none;
+   color: #000;
+   font-weight: 400;
+   font-size: 17px;
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: start;
+   flex-direction: column;
+   overflow: hidden;
+   border-bottom: 1px solid rgba(0, 0, 0,0.2);
+   transition: 0.3s linear;
+   line-height: 3;
+   padding-left: 17px;
+}
+.wraper-option-showMenu{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+.item-option-showMenu{
+   text-decoration: none;
+   color:#333;
+   width: 100%;
+   margin-top: -3px;
+   padding-left: 17px;
+}
+
+.products:focus,.Blog:focus ,.OtherPages:focus,.collections:focus{
+   margin-top: 10px;
+   height: 240px; 
+ }
+.item-option-showMenu:hover{
+   color: #00A459;
+}

@@ -13,7 +13,7 @@ const Left = () => {
     },
     {
       name: "Hoa quả các loại",
-      url: "/Oshi",
+      url: "/Fruits",
     },
     {
       name: "Trà trái cây",
@@ -21,7 +21,7 @@ const Left = () => {
     },
     {
       name: "Trà sữa",
-      url: "/Oshi",
+      url: "/MilkTea",
     },
   ];
   return (

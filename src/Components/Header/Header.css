@@ -1,4 +1,4 @@
-.container-header{
+.container-header-destop{
     background-color: #101089;
     position: relative;
     width: 100vw;
@@ -103,4 +103,23 @@
     padding: 0 40px;
     background-color: #00A459;
     color: #fff;
+}
+
+/* mobile */
+
+.container-header-mobile{display: none}
+.wrpaer-header-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: grey;
+    border-bottom: 1px solid gainsboro;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.fa-magnifying-glass,
+.fa-cart-shopping,
+.fa-bars-staggered{
+    cursor: pointer;
+    font-size: 1.5rem;
 }
