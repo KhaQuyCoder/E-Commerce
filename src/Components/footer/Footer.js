@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import "../../reponsive/Reponsive.css";
-import logo from "../../assets/logofooter.avif";
 const Footer = () => {
   const help = [
     "Help center",
@@ -24,7 +23,10 @@ const Footer = () => {
       <div className="wraper-footer">
         <ul className="logo-footer">
           <li>
-            <img src={logo} alt="logo" />
+            <img
+              src="https://nov-petalia.myshopify.com/cdn/shop/files/logo_190x.png?v=1700036607"
+              alt="logo"
+            />
           </li>
           <li>
             <span className="icon-footer">

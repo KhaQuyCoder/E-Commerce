@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import logoMobile from "../../assets/logofooter.avif";
 import "./ShowMenu.css";
 import { Link } from "react-router-dom";
 function Example() {
@@ -47,7 +46,10 @@ function Example() {
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <img src={logoMobile} alt="logo" />
+            <img
+              src="https://nov-petalia.myshopify.com/cdn/shop/files/logo_190x.png?v=1700036607"
+              alt="logo"
+            />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <ul className="option-showMenu">
