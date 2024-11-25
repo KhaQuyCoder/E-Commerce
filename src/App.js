@@ -8,6 +8,10 @@ import Oshi from "./pages/milkTea/Oshi";
 import ManagerState from "./state/ManagerState";
 import MilkTea from "./pages/milkTea/MilkTea";
 import Fruit from "./pages/milkTea/Fruit";
+import ShowHearts from "./Components/ShowListsHeart/ShowHearts";
+import Cart from "./pages/listCart/Cart";
+import Profile from "./pages/profile/Profile";
+import EditProfile from "./pages/profile/EditProfile";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
             <Route path="/Oshi" element={<Oshi />} />
             <Route path="/MilkTea" element={<MilkTea />} />
             <Route path="/Fruits" element={<Fruit />} />
+            <Route path="/ListsHeart" element={<ShowHearts />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Profile/Edit-Profile" element={<EditProfile />} />
           </Routes>
         </div>
       </Router>

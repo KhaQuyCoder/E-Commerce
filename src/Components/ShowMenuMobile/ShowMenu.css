@@ -1,6 +1,7 @@
 .btn-showMeunu{
    transform: translateY(5px);
    cursor: pointer;
+   font-size: 1.5rem;
 }
 .option-showMenu{
    display: flex;
@@ -11,7 +12,9 @@
 .collections,
 .products,
 .OtherPages,
-.Blog{
+.Blog,
+.login,
+.profile{
    text-decoration: none;
    color: #000;
    font-weight: 400;
@@ -39,11 +42,6 @@
    margin-top: -3px;
    padding-left: 17px;
 }
-
-.products:focus,.Blog:focus ,.OtherPages:focus,.collections:focus{
-   margin-top: 10px;
-   height: 240px; 
- }
 .item-option-showMenu:hover{
    color: #00A459;
 }

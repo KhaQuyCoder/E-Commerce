@@ -1,0 +1,64 @@
+
+.container-heart ,.main-total-cart{
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wraper-heart {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+  }
+  .col-heart td {
+    padding: 15px;
+  }
+  
+  .row-heart {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+  }
+  
+  .row-heart:hover {
+    background-color: #f1f1f1; 
+  }
+  
+  .row-heart td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .row-heart td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+.fa-trash,
+.fa-cart-shopping,
+.fa-eye{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.fa-trash{
+    color: red;
+}
+.fa-eye{
+    color: #00A459;
+}
+.cart{
+    color:#4E2295;
+    margin: 0 10px;
+}
+  
+  @media (max-width: 768px) {
+    .wraper-heart {
+      width: 100%;
+      font-size: 14px; 
+    }
+    .col-heart td, .row-heart td {
+      padding: 10px;
+    }
+  }
+  

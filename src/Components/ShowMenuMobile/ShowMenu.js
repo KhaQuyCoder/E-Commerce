@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./ShowMenu.css";
 import { Link } from "react-router-dom";
@@ -6,15 +6,25 @@ function Example() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const blog = useRef();
+  const other = useRef();
+  const pro = useRef();
+  const col = useRef();
   const handleCloseMobile = () => {
     setShow(false);
   };
   const optionMobile = [
     { name: "Trang chủ", url: "/", classN: "home" },
-    { name: "Bộ sưu tập", url: "/Collections", classN: "collections" },
+    {
+      name: "Bộ sưu tập",
+      url: "/Collections",
+      classN: "collections",
+      ref: col,
+    },
     {
       name: "Sản phẩm",
       classN: "products",
+      ref: pro,
       option: [
         {
           name: "Oshi Food",
@@ -34,9 +44,41 @@ function Example() {
         },
       ],
     },
-    { name: "Trang khác", url: "/OtherPages", classN: "OtherPages" },
-    { name: "BLOG", url: "/Blog", classN: "Blog" },
+    {
+      name: "Trang khác",
+      url: "/OtherPages",
+      classN: "OtherPages",
+      ref: other,
+    },
+    { name: "BLOG", url: "/Blog", classN: "Blog", ref: blog },
+    { name: "Hồ sơ", url: "/Profile", classN: "profile" },
+    { name: "Login", url: "/Login", classN: "login" },
   ];
+  const handerShowMenuChild = (ref, name) => {
+    if (ref === pro) {
+      ref.current.style.height = "240px";
+      col.current.style.height = "50px";
+      other.current.style.height = "50px";
+      blog.current.style.height = "50px";
+    } else if (ref === col) {
+      ref.current.style.height = "240px";
+      pro.current.style.height = "50px";
+      other.current.style.height = "50px";
+      blog.current.style.height = "50px";
+    } else if (ref === other) {
+      ref.current.style.height = "240px";
+      col.current.style.height = "50px";
+      pro.current.style.height = "50px";
+      blog.current.style.height = "50px";
+    } else if (ref === blog) {
+      ref.current.style.height = "240px";
+      col.current.style.height = "50px";
+      other.current.style.height = "50px";
+      pro.current.style.height = "50px";
+    } else if (name === "Trang chủ" || name === "Hồ sơ" || name === "Login") {
+      setShow(false);
+    }
+  };
   return (
     <>
       <p className="btn-showMeunu" onClick={handleShow}>
@@ -56,16 +98,32 @@ function Example() {
           {optionMobile.map((item, index) => (
             <Link
               key={index}
-              // to={item.url}
+              to={
+                item.name === "Trang chủ"
+                  ? item.url
+                  : "" || item.name === "Hồ sơ"
+                  ? item.url
+                  : "/Profile" || item.name === "Login"
+                  ? item.url
+                  : "/Login"
+              }
               className={item.classN}
+              onClick={() => handerShowMenuChild(item.ref, item.name)}
+              ref={item.ref}
             >
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {item.name}
                 <span>
-                  <i
-                    class="fa-solid fa-chevron-down"
-                    style={{ marginRight: "15px" }}
-                  ></i>
+                  {item.name !== "Trang chủ" &&
+                  item.name !== "Login" &&
+                  item.name !== "Hồ sơ" ? (
+                    <i
+                      class="fa-solid fa-chevron-down"
+                      style={{ marginRight: "15px" }}
+                    ></i>
+                  ) : (
+                    ""
+                  )}
                 </span>
               </div>
 

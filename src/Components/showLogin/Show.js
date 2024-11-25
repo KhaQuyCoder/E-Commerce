@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { useNavigate } from "react-router-dom";
+import { State } from "../../state/ManagerState";
 import "./Show.css";
 function Example() {
   const [show, setShow] = useState(false);
@@ -8,7 +10,8 @@ function Example() {
   const [email, setEmail] = useState("");
   const [checkEmail, setCheckEmail] = useState();
   const [checkPass, setCheckPass] = useState();
-
+  const navigate = useNavigate();
+  const { setCheckLogin } = useContext(State);
   const emailRef = useRef();
   const passRef = useRef();
 
@@ -31,6 +34,9 @@ function Example() {
       setCheckPass(false);
     }
     if (checkEmail && checkPass) {
+      setShow(false);
+      setCheckLogin(true);
+      navigate("/Profile");
     }
   };
   return (
@@ -74,7 +80,7 @@ function Example() {
                 <p style={{ fontSize: "12px", color: "red" }}>
                   {pass?.length === 0
                     ? "Trường này không được để trống!"
-                    : "Email phải hợp lệ!"}
+                    : "Mật khẩu không đủ mạnh!"}
                 </p>
               )}
             </label>

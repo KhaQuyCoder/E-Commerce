@@ -9,39 +9,85 @@ import Loading from "../../Components/loading/Loading";
 import Footer from "../../Components/footer/Footer";
 const RenderProducts = ({ url, check }) => {
   const dataOshi = useFetchData(url);
-  const { countHeart, setCountHeart, countCart, setCountCart } =
-    useContext(State);
+  const {
+    countHeart,
+    setCountHeart,
+    countCart,
+    setCountCart,
+    listHearts,
+    setListsHeart,
+    listCarts,
+    setListsCarts,
+  } = useContext(State);
   const [loading, setLoading] = useState(Array(dataOshi.length).fill(false));
   const [heartedStatus, setHeartedStatus] = useState(
     Array(dataOshi.length).fill(false)
   );
   const [load, setLoad] = useState(true);
 
-  const displaySuccess = useRef();
-
-  const handleClickHeart = (index) => {
+  const handleClickHeart = (index, image, name, description, coin, id) => {
     const newHeartedStatus = [...heartedStatus];
     newHeartedStatus[index] = !newHeartedStatus[index];
     setHeartedStatus(newHeartedStatus);
 
+    let checkProductInList = listHearts?.every((item) => item.idItem !== id);
     if (newHeartedStatus[index]) {
-      setCountHeart(countHeart + 1);
+      if (checkProductInList) {
+        setCountHeart(countHeart + 1);
+        setListsHeart((pre) => [
+          ...pre,
+          {
+            idItem: id,
+            nameItem: name,
+            imageItem: image,
+            coinItem: coin,
+            desItem: description,
+          },
+        ]);
+      }
     } else {
+      let listHeartsRemove = listHearts.filter((item) => item.idItem !== id);
+      setListsHeart(listHeartsRemove);
       setCountHeart(countHeart - 1);
     }
   };
 
-  const handerClickCart = (index) => {
+  const handerClickCart = (index, image, name, coin, id) => {
     const newLoading = [...loading];
     newLoading[index] = true;
     setLoading(newLoading);
-
+    const checkItemInCart = listCarts.every((item) => item.idItem !== id);
+    const findProductInListCart = listCarts.find((item) => item.idItem === id);
     const setTimeLoading = setTimeout(() => {
       const updateLoading = [...loading];
       updateLoading[index] = false;
       setLoading(updateLoading);
       setCountCart(countCart + 1);
-    }, 2000);
+      if (checkItemInCart) {
+        setListsCarts([
+          ...listCarts,
+          {
+            idItem: id,
+            imageItem: image,
+            nameItem: name,
+            coinItem: coin,
+            slItem: 1,
+          },
+        ]);
+      }
+      if (findProductInListCart) {
+        const updatedListCarts = listCarts.map((item) => {
+          if (item.idItem === id) {
+            return {
+              ...item,
+              slItem: item.slItem + 1,
+            };
+          }
+          return item;
+        });
+        setListsCarts(updatedListCarts);
+      }
+    }, 700);
 
     return () => clearTimeout(setTimeLoading);
   };
@@ -78,7 +124,16 @@ const RenderProducts = ({ url, check }) => {
                       className={`fa-solid fa-heart ${
                         heartedStatus[index] ? "theme-heart" : ""
                       }`}
-                      onClick={() => handleClickHeart(index)}
+                      onClick={() =>
+                        handleClickHeart(
+                          index,
+                          item.image,
+                          item.name,
+                          item.description,
+                          item.coin,
+                          item.id
+                        )
+                      }
                     ></i>
                   </Card.Title>
                   <Card.Title className="name-product">{item.name}</Card.Title>
@@ -99,7 +154,15 @@ const RenderProducts = ({ url, check }) => {
                   <Button className="buy-btn-product">Mua ngay</Button>
                   <Button
                     className="cart-btn-product"
-                    onClick={() => handerClickCart(index)}
+                    onClick={() =>
+                      handerClickCart(
+                        index,
+                        item.image,
+                        item.name,
+                        item.coin,
+                        item.id
+                      )
+                    }
                   >
                     {loading[index] ? (
                       <i className="fa-solid fa-spinner"></i>

@@ -1,15 +1,20 @@
-import React, { useContext } from "react";
-import "./Header.css";
+import React, { useContext, useRef, useState } from "react";
 import "../../reponsive/Reponsive.css";
+import "./Header.css";
 import logoHeader from "../../assets/logo-2.avif";
-import logoMobile from "../../assets/logofooter.avif";
 import HeaderTwo from "./HeaderTwo";
 import Show from "../showLogin/Show";
 import { Link } from "react-router-dom";
 import { State } from "../../state/ManagerState";
 import ShowMenu from "../ShowMenuMobile/ShowMenu";
+import ShowHearts from "../../Components/ShowListsHeart/ShowHearts";
 function Header() {
-  const { countHeart, countCart } = useContext(State);
+  const { countHeart, countCart, showHeart, setShowHeart, checkLogin } =
+    useContext(State);
+
+  const handerShow = () => {
+    setShowHeart(true);
+  };
   return (
     <>
       <div className="container-header-destop">
@@ -29,19 +34,25 @@ function Header() {
               </span>
             </div>
             <div className="icon-header">
-              <div className="message-header">
-                <Show />
-              </div>
+              <Link
+                to={checkLogin ? "/Profile" : ""}
+                className="message-header"
+              >
+                {checkLogin ? <i class="fa-solid fa-user"></i> : <Show />}
+              </Link>
 
-              <Link to="/HeartProducts" className="message-header">
+              <Link
+                to={checkLogin ? "/ListsHeart" : "/HeartProducts"}
+                className="message-header"
+              >
                 <i class="fa-solid fa-heart"></i>
                 <p className="index-heart-header">{countHeart}</p>
               </Link>
 
-              <div className="message-header">
+              <Link className="message-header" to="/Cart">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <p className="index-cart-header">{countCart}</p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -62,13 +73,18 @@ function Header() {
             src="https://nov-petalia.myshopify.com/cdn/shop/files/logo_190x.png?v=1700036607"
             alt="logo"
           />
-
           <div>
-            <i
-              class="fa-solid fa-cart-shopping"
-              style={{ margin: "0 30px" }}
-            ></i>
-            <i class="fa-solid fa-bars-staggered"></i>
+            <Link className="cart-mobile" to="/Cart">
+              <i
+                class="s fa-solid fa-cart-shopping"
+                style={{ margin: "0 30px" }}
+              ></i>
+              <span className="count-cart-mobile">{countCart}</span>
+            </Link>
+            <Link className="cart-mobile" to="/ListsHeart">
+              <i class="fa-solid fa-heart" onClick={handerShow}></i>
+              <span className="count-heart-mobile">{countHeart}</span>
+            </Link>
           </div>
         </div>
       </div>
