@@ -73,7 +73,7 @@ function Header() {
             src="https://nov-petalia.myshopify.com/cdn/shop/files/logo_190x.png?v=1700036607"
             alt="logo"
           />
-          <div>
+          <div style={{ display: "flex", alignItems: "center" }}>
             <Link className="cart-mobile" to="/Cart">
               <i
                 class="s fa-solid fa-cart-shopping"
