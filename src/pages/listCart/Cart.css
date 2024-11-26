@@ -83,6 +83,12 @@
     margin-left: 6px;
     color: #00A459;
 }
+.zero-cart{
+    display: flex;justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }

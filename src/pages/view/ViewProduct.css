@@ -1,0 +1,78 @@
+.wraper-view{
+    display: flex;
+    column-gap: 40px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.name-view{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.des-view,.buy-view,
+.post-view{
+    font-size: 1.2rem;
+}
+.buy-view > u,
+.post-view > u{color: orange;}
+.coin-view{
+    font-size: 1.2rem;
+}
+.coin-view > span{
+    color: #00A459;
+}
+.sale-view > span{
+    font-size: 1.2rem;
+    color: #00A459;
+    font-weight: 600;
+}
+.star-view{
+    font-size: 1.2rem;
+    color: #00A459;
+}
+.btn-view{
+    width: 200px;
+    height: 40px;
+    background-color: #4E2295;
+    color: #fff;
+    border: none;
+    transition: 0.2s ease;
+}
+.ship-view{
+    font-size: 1.2rem;
+}
+.btn-view:hover{
+    background-color: #00A459;
+}
+.image-view{
+    width: 300px !important;
+    object-fit: contain;
+}
+.wraper-feedback-view{
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.main-post-view{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+}
+.image-user-view{
+    width: 50px;
+    height: 50px;
+    border-radius: 99999px;
+}
+.user-view{
+    display: flex;
+    column-gap: 10px;
+}
+.content-view{
+    margin-left: 60px;
+}
+.infor-user_view{
+    line-height: 0.9;
+}

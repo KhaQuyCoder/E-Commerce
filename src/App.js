@@ -12,6 +12,7 @@ import ShowHearts from "./Components/ShowListsHeart/ShowHearts";
 import Cart from "./pages/listCart/Cart";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
+import ViewProduct from "./pages/view/ViewProduct";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Profile/Edit-Profile" element={<EditProfile />} />
+            <Route path="/View/:id" element={<ViewProduct />} />
           </Routes>
         </div>
       </Router>

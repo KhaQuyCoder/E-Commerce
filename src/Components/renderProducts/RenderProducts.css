@@ -4,9 +4,13 @@ body{
 .wraper-products{
     display: flex;
     row-gap: 20px;
+    column-gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
+}
+.Link{
+    text-decoration: none;
 }
 .item-product{
     cursor: pointer;

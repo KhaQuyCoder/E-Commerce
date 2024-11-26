@@ -7,6 +7,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { State } from "../../state/ManagerState";
 import Loading from "../../Components/loading/Loading";
 import Footer from "../../Components/footer/Footer";
+import { Link } from "react-router-dom";
 const RenderProducts = ({ url, check }) => {
   const dataOshi = useFetchData(url);
   const {
@@ -18,6 +19,8 @@ const RenderProducts = ({ url, check }) => {
     setListsHeart,
     listCarts,
     setListsCarts,
+    viewProduct,
+    setViewProduct,
   } = useContext(State);
   const [loading, setLoading] = useState(Array(dataOshi.length).fill(false));
   const [heartedStatus, setHeartedStatus] = useState(
@@ -99,6 +102,20 @@ const RenderProducts = ({ url, check }) => {
 
     return () => clearTimeout(setLoadingComponent);
   }, []);
+  const handerGetIemToView = (item) => {
+    setViewProduct([
+      {
+        idItem: item.id,
+        nameItem: item.name,
+        desItem: item.description,
+        imageItem: item.image,
+        coinItem: item.coin,
+        saleItem: item.sale,
+        starItem: item.star,
+        weigthItem: item.weight,
+      },
+    ]);
+  };
   return (
     <>
       {load ? (
@@ -107,24 +124,27 @@ const RenderProducts = ({ url, check }) => {
         <div className="conainer-product">
           <div className="wraper-products">
             {(check ? dataOshi.record : dataOshi).map((item, index) => (
-              <Card
-                style={{ width: "18rem" }}
-                key={index}
-                className="item-product"
+              <Link
+                className="Link"
+                to={`/View/${item.id}`}
+                onClick={() => handerGetIemToView(item)}
               >
-                <Card.Img className="image-product" src={item.image} />
-                <Card.Body>
-                  {item.sale !== "false" && (
-                    <Card.Title className="sale-product">
-                      {item.sale}
-                    </Card.Title>
-                  )}
-                  <Card.Title className="heart-product">
-                    <i
-                      className={`fa-solid fa-heart ${
-                        heartedStatus[index] ? "theme-heart" : ""
-                      }`}
-                      onClick={() =>
+                <Card
+                  style={{ width: "18rem" }}
+                  key={index}
+                  className="item-product"
+                >
+                  <Card.Img className="image-product" src={item.image} />
+                  <Card.Body>
+                    {item.sale !== "false" && (
+                      <Card.Title className="sale-product">
+                        {item.sale}
+                      </Card.Title>
+                    )}
+                    <Card.Title
+                      className="heart-product"
+                      onClick={(e) => {
+                        e.preventDefault();
                         handleClickHeart(
                           index,
                           item.image,
@@ -132,46 +152,55 @@ const RenderProducts = ({ url, check }) => {
                           item.description,
                           item.coin,
                           item.id
-                        )
-                      }
-                    ></i>
-                  </Card.Title>
-                  <Card.Title className="name-product">{item.name}</Card.Title>
-                  <Card.Text className="weidth-product">
-                    {item.weight}
-                  </Card.Text>
-                  <Card.Text className="des-product">
-                    {item.description}
-                  </Card.Text>
-                  <Card.Text className="coin-product">{item.coin}</Card.Text>
-                  <Card.Text className="star-product">
-                    {Array.from({ length: item.start }).map((_, i) => (
-                      <span key={i}>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                    ))}
-                  </Card.Text>
-                  <Button className="buy-btn-product">Mua ngay</Button>
-                  <Button
-                    className="cart-btn-product"
-                    onClick={() =>
-                      handerClickCart(
-                        index,
-                        item.image,
-                        item.name,
-                        item.coin,
-                        item.id
-                      )
-                    }
-                  >
-                    {loading[index] ? (
-                      <i className="fa-solid fa-spinner"></i>
-                    ) : (
-                      <i className="fa-solid fa-cart-shopping"></i>
-                    )}
-                  </Button>
-                </Card.Body>
-              </Card>
+                        );
+                      }}
+                    >
+                      <i
+                        className={`fa-solid fa-heart ${
+                          heartedStatus[index] ? "theme-heart" : ""
+                        }`}
+                      ></i>
+                    </Card.Title>
+                    <Card.Title className="name-product">
+                      {item.name}
+                    </Card.Title>
+                    <Card.Text className="weidth-product">
+                      {item.weight}
+                    </Card.Text>
+                    <Card.Text className="des-product">
+                      {item.description}
+                    </Card.Text>
+                    <Card.Text className="coin-product">{item.coin}</Card.Text>
+                    <Card.Text className="star-product">
+                      {Array.from({ length: item.star }).map((_, i) => (
+                        <span key={i}>
+                          <i className="fa-solid fa-star"></i>
+                        </span>
+                      ))}
+                    </Card.Text>
+                    <Button className="buy-btn-product">Mua ngay</Button>
+                    <Button
+                      className="cart-btn-product"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handerClickCart(
+                          index,
+                          item.image,
+                          item.name,
+                          item.coin,
+                          item.id
+                        );
+                      }}
+                    >
+                      {loading[index] ? (
+                        <i className="fa-solid fa-spinner"></i>
+                      ) : (
+                        <i className="fa-solid fa-cart-shopping"></i>
+                      )}
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

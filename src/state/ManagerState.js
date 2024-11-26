@@ -10,6 +10,7 @@ const ManagerState = ({ children }) => {
   const [checkLogin, setCheckLogin] = useState(false);
   const [listHearts, setListsHeart] = useState([]);
   const [listCarts, setListsCarts] = useState([]);
+  const [viewProduct, setViewProduct] = useState([]);
   const [infor, setInfor] = useState(Array(9).fill(""));
 
   return (
@@ -29,6 +30,8 @@ const ManagerState = ({ children }) => {
         setListsCarts,
         infor,
         setInfor,
+        viewProduct,
+        setViewProduct,
       }}
     >
       {children}

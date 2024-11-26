@@ -3,10 +3,10 @@ import { State } from "../../state/ManagerState";
 import Footer from "../../Components/footer/Footer";
 import "../../reponsive/Reponsive.css";
 import "./Cart.css";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const MAX_TOTAL = 400000;
   const { setCountCart, listCarts, setListsCarts } = useContext(State);
-  const [conutProduct, setCountProduct] = useState(1);
   const handerDelete = (itemCart) => {
     const filterListCarts = listCarts.filter(
       (item) => item.idItem !== itemCart.idItem
@@ -69,8 +69,8 @@ const Cart = () => {
               <td>
                 <img src={item.imageItem} alt={index} />
               </td>
-              <td>{item.nameItem}</td>
-              <td>{item.coinItem}</td>
+              <td className="namItem-cart">{item.nameItem}</td>
+              <td className="coinItem-cart">{item.coinItem}</td>
               <td>
                 <div className="custom-Cart">
                   <span onClick={() => handerCountCart(item)}>
@@ -97,6 +97,12 @@ const Cart = () => {
           ))}
         </table>
       </div>
+      {listCarts?.length === 0 && (
+        <div className="zero-cart">
+          Bạn vẫn chưa thêm sản phẩm nào vào giỏ hàng.
+          <Link to={"/"}>Xem sản phẩm</Link>
+        </div>
+      )}
       <div>
         <div className="main-total-cart">
           <h3>
@@ -127,7 +133,6 @@ const Cart = () => {
           </button>
         </div>
       </div>
-
       <Footer />
     </>
   );

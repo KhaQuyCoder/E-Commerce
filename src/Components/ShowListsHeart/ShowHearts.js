@@ -1,8 +1,9 @@
 import React, { useRef, useContext } from "react";
 import "./ShowHearts.css";
+import "../../reponsive/Reponsive.css";
 import { State } from "../../state/ManagerState";
 import Footer from "../footer/Footer";
-
+import { Link } from "react-router-dom";
 const ShowHearts = () => {
   const {
     listHearts,
@@ -68,11 +69,11 @@ const ShowHearts = () => {
               <td>
                 <img src={item.imageItem} alt={index} />
               </td>
-              <td>{item.nameItem}</td>
-              <td>{item.coinItem}</td>
+              <td className="namItem-heart">{item.nameItem}</td>
+              <td className="coinItem-heart">{item.coinItem}</td>
               <td>
                 <span onClick={() => handerDelete(item.idItem)}>
-                  <i class="fa-solid fa-trash"></i>
+                  <i class="trash fa-solid fa-trash"></i>
                 </span>{" "}
                 <span onClick={() => handerAddcart(item)}>
                   <i class="cart fa-solid fa-cart-shopping"></i>
@@ -85,6 +86,12 @@ const ShowHearts = () => {
           ))}
         </table>
       </div>
+      {listHearts?.length === 0 && (
+        <div className="zero-cart">
+          Bạn vẫn chưa yêu thích sản phẩm nào.
+          <Link to={"/"}>Xem sản phẩm</Link>
+        </div>
+      )}
       <Footer />
     </>
   );
