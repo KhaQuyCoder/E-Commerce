@@ -75,10 +75,7 @@ function Header() {
           />
           <div style={{ display: "flex", alignItems: "center" }}>
             <Link className="cart-mobile" to="/Cart">
-              <i
-                class="s fa-solid fa-cart-shopping"
-                style={{ margin: "0 30px" }}
-              ></i>
+              <i class="s fa-solid fa-cart-shopping"></i>
               <span className="count-cart-mobile">{countCart}</span>
             </Link>
             <Link className="cart-mobile" to="/ListsHeart">

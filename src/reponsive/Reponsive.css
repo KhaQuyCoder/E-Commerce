@@ -1,4 +1,7 @@
 @media screen and (max-width:600px){
+    body{
+        overflow-x: hidden !important;
+    }
     .container-header-destop,.header-option,.wraper-left,.weidth-product,.container-product{display: none;}
     .container-header-mobile{display: block !important}
     .wraper-slider{grid-template-columns: 1fr !important;}
