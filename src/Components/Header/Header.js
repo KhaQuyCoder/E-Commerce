@@ -60,11 +60,17 @@ function Header() {
       <HeaderTwo />
       <div className="container-header-mobile">
         <div className="wrpaer-header-mobile">
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
             <ShowMenu />
             <i
               class="fa-solid fa-magnifying-glass"
-              style={{ margin: "0 30px" }}
+              style={{ margin: "0 20px" }}
             ></i>
           </div>
 
@@ -75,11 +81,18 @@ function Header() {
           />
           <div style={{ display: "flex", alignItems: "center" }}>
             <Link className="cart-mobile" to="/Cart">
-              <i class="s fa-solid fa-cart-shopping"></i>
+              <i
+                class="s fa-solid fa-cart-shopping"
+                style={{ margin: "0 20px", color: "grey" }}
+              ></i>
               <span className="count-cart-mobile">{countCart}</span>
             </Link>
             <Link className="cart-mobile" to="/ListsHeart">
-              <i class="fa-solid fa-heart" onClick={handerShow}></i>
+              <i
+                style={{ color: "grey" }}
+                class="fa-solid fa-heart"
+                onClick={handerShow}
+              ></i>
               <span className="count-heart-mobile">{countHeart}</span>
             </Link>
           </div>

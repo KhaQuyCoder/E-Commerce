@@ -1,6 +1,9 @@
+body{
+    overflow-x: hidden !important;
+}
 .wraper-products{
     display: flex;
-    gap: 20px;
+    row-gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
