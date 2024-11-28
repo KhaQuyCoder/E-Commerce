@@ -3,7 +3,17 @@ import "./ViewProduct.css";
 import { State } from "../../state/ManagerState";
 import Footer from "../../Components/footer/Footer";
 const ViewProduct = () => {
-  const { viewProduct } = useContext(State);
+  const {
+    viewProduct,
+    listCarts,
+    setCountCart,
+    setListsCarts,
+    countCart,
+    setCountHeart,
+    countHeart,
+    setListsHeart,
+    listHearts,
+  } = useContext(State);
   const [dataPost, setDataPost] = useState([]);
   const [user, setUser] = useState([]);
 
@@ -15,6 +25,56 @@ const ViewProduct = () => {
       .then((data) => data.json())
       .then((data) => setUser(data));
   }, []);
+  const handerClickCart = (image, name, coin, id) => {
+    const checkItemInCart = listCarts.every((item) => item.idItem !== id);
+    const findProductInListCart = listCarts.find((item) => item.idItem === id);
+    setCountCart(countCart + 1);
+    if (checkItemInCart) {
+      setListsCarts([
+        ...listCarts,
+        {
+          idItem: id,
+          imageItem: image,
+          nameItem: name,
+          coinItem: coin,
+          slItem: 1,
+        },
+      ]);
+    }
+    if (findProductInListCart) {
+      const updatedListCarts = listCarts.map((item) => {
+        if (item.idItem === id) {
+          return {
+            ...item,
+            slItem: item.slItem + 1,
+          };
+        }
+        return item;
+      });
+      setListsCarts(updatedListCarts);
+    }
+  };
+
+  const handleClickHeart = (image, name, coin, id) => {
+    let checkProductInList = listHearts?.every((item) => item.idItem !== id);
+
+    if (checkProductInList) {
+      setCountHeart(countHeart + 1);
+      setListsHeart((pre) => [
+        ...pre,
+        {
+          idItem: id,
+          nameItem: name,
+          imageItem: image,
+          coinItem: coin,
+        },
+      ]);
+    } else {
+      let listHeartsRemove = listHearts.filter((item) => item.idItem !== id);
+      setListsHeart(listHeartsRemove);
+      setCountHeart(countHeart - 1);
+    }
+  };
 
   return (
     <>
@@ -60,9 +120,36 @@ const ViewProduct = () => {
               </p>
 
               <button className="btn-view">Mua ngay</button>
+              <button
+                className="btn-cart-view"
+                onClick={() =>
+                  handerClickCart(
+                    item.imageItem,
+                    item.nameItem,
+                    item.coinItem,
+                    item.idItem
+                  )
+                }
+              >
+                Thêm vào giỏ hàng
+              </button>
+              <button
+                className="btn-heart-view"
+                onClick={() =>
+                  handleClickHeart(
+                    item.imageItem,
+                    item.nameItem,
+                    item.coinItem,
+                    item.idItem
+                  )
+                }
+              >
+                Thêm vào mục yêu thích
+              </button>
             </div>
           </div>
         ))}
+
         <div className="wraper-feedback-view">
           <h3>Khách hàng nói gì về sản phẩm này</h3>
           <div>
@@ -89,6 +176,7 @@ const ViewProduct = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

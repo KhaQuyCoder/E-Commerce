@@ -102,3 +102,50 @@ body{
         transform: rotate(360deg);
     }
 }
+.show-message{
+    position: fixed;
+    right: 10px;
+    bottom: 10%;
+    width: 400px;
+    height: 100px;
+    transition: 0.3s linear;
+    background-color: #fff;
+    transform: translateX(105%);
+    z-index: 99999;
+}
+.message-seccess{
+    width: 100%;
+    height: 30%;
+    background-color: #00A459;
+    display: flex;justify-content: space-between;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.fa-xmark,.fa-bell{
+    margin-top: 4px;
+}
+.fa-xmark{
+    cursor: pointer;
+}
+.wraper-showmeesage-product{display: flex;column-gap: 20px;}
+.imgae-showmeesage-product{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 7px 0;
+}
+.btn-showmeseage-product{
+    max-width: max-content;
+    height: 40px;
+    display: flex;align-items: center;justify-content: center;
+    text-decoration: none;
+    background-color: #00A459;
+    color:#fff;
+    padding: 7px 5px;
+    margin: 10px 0 0 20px;
+    cursor: pointer;
+}
+.nameShow-product{
+    width:220px;
+}

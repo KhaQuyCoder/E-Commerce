@@ -7,8 +7,11 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { State } from "../../state/ManagerState";
 import Loading from "../../Components/loading/Loading";
 import Footer from "../../Components/footer/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const RenderProducts = ({ url, check }) => {
+  const showMessage = useRef();
+  const navigator = useNavigate();
+  let setTimeShowMessage;
   const dataOshi = useFetchData(url);
   const {
     countHeart,
@@ -19,8 +22,9 @@ const RenderProducts = ({ url, check }) => {
     setListsHeart,
     listCarts,
     setListsCarts,
-    viewProduct,
     setViewProduct,
+    showMessageItem,
+    setShowMessageItem,
   } = useContext(State);
   const [loading, setLoading] = useState(Array(dataOshi.length).fill(false));
   const [heartedStatus, setHeartedStatus] = useState(
@@ -77,6 +81,15 @@ const RenderProducts = ({ url, check }) => {
             slItem: 1,
           },
         ]);
+        setShowMessageItem([
+          {
+            idItem: id,
+            imageItem: image,
+            nameItem: name,
+            coinItem: coin,
+            slItem: 1,
+          },
+        ]);
       }
       if (findProductInListCart) {
         const updatedListCarts = listCarts.map((item) => {
@@ -89,6 +102,14 @@ const RenderProducts = ({ url, check }) => {
           return item;
         });
         setListsCarts(updatedListCarts);
+      }
+      setTimeShowMessage = setTimeout(() => {
+        if (showMessage.current) {
+          showMessage.current.style.transform = "translateX(105%)";
+        }
+      }, 3000);
+      if (showMessage.current) {
+        showMessage.current.style.transform = "translateX(0)";
       }
     }, 700);
 
@@ -115,6 +136,10 @@ const RenderProducts = ({ url, check }) => {
         weigthItem: item.weight,
       },
     ]);
+  };
+  const handerClick = () => {
+    clearTimeout(setTimeShowMessage);
+    navigator("/Cart");
   };
   return (
     <>
@@ -205,6 +230,40 @@ const RenderProducts = ({ url, check }) => {
           </div>
         </div>
       )}
+      <div className="show-message" ref={showMessage}>
+        <div className="message-seccess">
+          <i class="fa-solid fa-bell"></i>
+          <span style={{ marginRight: "30px" }}>
+            Thêm sản phẩm vào giỏ hàng thành công
+          </span>
+          <i
+            class="fa-solid fa-xmark"
+            onClick={() =>
+              (showMessage.current.style.transform = "translateX(105%)")
+            }
+          ></i>
+        </div>
+        <div>
+          {showMessageItem?.map((item) => (
+            <div className="wraper-showmeesage-product" key={item.idItem}>
+              <img
+                className="imgae-showmeesage-product"
+                src={item.imageItem}
+                alt={item.nameItem}
+              />
+              <div>
+                <p className="nameShow-product">{item.nameItem}</p>
+                <p style={{ transform: "translateY(-10px)" }}>
+                  {item.coinItem}
+                </p>
+              </div>
+              <p className="btn-showmeseage-product" onClick={handerClick}>
+                Xem
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
       {load ? "" : <Footer />}
     </>
   );

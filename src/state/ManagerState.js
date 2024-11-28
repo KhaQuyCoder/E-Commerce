@@ -11,6 +11,7 @@ const ManagerState = ({ children }) => {
   const [listHearts, setListsHeart] = useState([]);
   const [listCarts, setListsCarts] = useState([]);
   const [viewProduct, setViewProduct] = useState([]);
+  const [showMessageItem, setShowMessageItem] = useState([]);
   const [infor, setInfor] = useState(Array(9).fill(""));
 
   return (
@@ -32,6 +33,8 @@ const ManagerState = ({ children }) => {
         setInfor,
         viewProduct,
         setViewProduct,
+        showMessageItem,
+        setShowMessageItem,
       }}
     >
       {children}

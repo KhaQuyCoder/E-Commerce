@@ -13,6 +13,7 @@ import Cart from "./pages/listCart/Cart";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import ViewProduct from "./pages/view/ViewProduct";
+import CheckOut from "./pages/checkouts/CheckOut";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Profile/Edit-Profile" element={<EditProfile />} />
             <Route path="/View/:id" element={<ViewProduct />} />
+            <Route path="/CheckOut" element={<CheckOut />} />
           </Routes>
         </div>
       </Router>

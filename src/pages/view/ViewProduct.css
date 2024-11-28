@@ -32,7 +32,9 @@
     font-size: 1.2rem;
     color: #00A459;
 }
-.btn-view{
+.btn-view,.btn-cart-view,
+.btn-heart-view{
+    margin: 0 10px;
     width: 200px;
     height: 40px;
     background-color: #4E2295;
@@ -40,12 +42,20 @@
     border: none;
     transition: 0.2s ease;
 }
+.btn-cart-view{
+    background-color: #00A459;
+}
 .ship-view{
     font-size: 1.2rem;
 }
 .btn-view:hover{
     background-color: #00A459;
 }
+.btn-cart-view:hover{
+    background-color: #4E2295;
+}
+.btn-heart-view:hover{background-color: rgba(0, 0, 0, 0.6);}
+.btn-heart-view{background-color:#FE2C55 ;}
 .image-view{
     width: 300px !important;
     object-fit: contain;
@@ -76,3 +86,5 @@
 .infor-user_view{
     line-height: 0.9;
 }
+
+

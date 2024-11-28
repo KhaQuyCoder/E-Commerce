@@ -128,9 +128,9 @@ const Cart = () => {
               </span>
             </p>
           </div>
-          <button class="glow-on-hover" type="button">
+          <Link class="glow-on-hover" to={"/CheckOut"}>
             Đi đến thanh toán
-          </button>
+          </Link>
         </div>
       </div>
       <Footer />
