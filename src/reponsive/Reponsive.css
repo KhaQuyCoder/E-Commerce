@@ -52,7 +52,7 @@
         font-size: 16px;
     }
     
-    .fa-cart-shopping,.fa-spinner{
+    .fa-cart-shopping{
         font-size: 0.8rem !important;
         transform: translateY(-3px) ;
     }
@@ -135,6 +135,7 @@
         grid-column-start: 1;
         grid-row-start: 2;
         padding: 0 10px !important;
+        margin: 20px 0;
    }
    .products-checkout{
         grid-column-start: 1;
@@ -149,7 +150,36 @@
     .namebank{
         font-size: 12px;
     }
-
+    .show-message{
+        max-width: 370px !important;
+    }
+    .btn-showmeseage-product{
+        display: none !important;
+    }
+    .row-heart{
+        position: relative !important;
+    }
+    .name-checkout{
+        position: absolute !important;
+        top: 25% !important;
+        left: 20%;
+    }
+    .coin-checkout{
+        position: absolute !important;
+        top: 40% !important;
+        left: 20%;
+    }
+    .sl-checkout{
+        position: absolute !important;
+        top: 35% !important;
+        left: 80%;
+    }
+    .key{
+        display: none;
+    }
+    .container-blog{
+        padding: 10px 20px;
+    }
 }
 
 
@@ -228,7 +258,10 @@
    }
    .footer-checkout{
     padding: 0 10px !important;
-}
+    }
+    .container-blog{
+        padding: 10px 20px;
+    }
 }
 
 
@@ -262,5 +295,8 @@
     }
     .input-editprofile{
         width: 100% !important;
+    }
+    .container-blog{
+        padding: 10px 20px;
     }
 }

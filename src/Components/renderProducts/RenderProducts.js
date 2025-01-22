@@ -253,7 +253,10 @@ const RenderProducts = ({ url, check }) => {
               />
               <div>
                 <p className="nameShow-product">{item.nameItem}</p>
-                <p style={{ transform: "translateY(-10px)" }}>
+                <p
+                  style={{ transform: "translateY(-10px)" }}
+                  className="coinshow-product"
+                >
                   {item.coinItem}
                 </p>
               </div>

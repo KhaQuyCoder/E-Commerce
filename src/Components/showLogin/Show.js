@@ -19,21 +19,24 @@ function Example() {
   const handleShow = () => setShow(true);
   const handerSubmit = (e) => {
     e.preventDefault();
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPassValid = pass?.length > 6;
+
+    if (isEmailValid) {
       setCheckEmail(true);
       emailRef.current.style.borderColor = "";
     } else {
       emailRef.current.style.borderColor = "#EF5350";
       setCheckEmail(false);
     }
-    if (pass?.length > 6) {
+    if (isPassValid) {
       passRef.current.style.borderColor = "";
       setCheckPass(true);
     } else {
       passRef.current.style.borderColor = "#EF5350";
       setCheckPass(false);
     }
-    if (checkEmail && checkPass) {
+    if (isEmailValid && isPassValid) {
       setShow(false);
       setCheckLogin(true);
       navigate("/Profile");
@@ -45,7 +48,7 @@ function Example() {
         <i class="fa-solid fa-user"></i>
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="container-showLogin">
         <Modal.Header closeButton>
           <Modal.Title>Đăng nhập</Modal.Title>
         </Modal.Header>

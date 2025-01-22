@@ -26,7 +26,12 @@ const HeaderTwo = () => {
         <li style={{ margin: " 0 10px" }}>Bộ sưu tập</li>
         <li style={{ margin: " 0 10px" }}>Sản phẩm</li>
         <li style={{ margin: " 0 10px" }}>Trang khác</li>
-        <li style={{ margin: " 0 10px" }}>BLOG</li>
+        <Link
+          style={{ margin: " 0 10px", textDecoration: "none", color: "black" }}
+          to="/BLOG"
+        >
+          BLOG
+        </Link>
       </ul>
     </div>
   );

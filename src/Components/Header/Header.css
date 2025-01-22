@@ -10,13 +10,14 @@
 
 .header-search{
     width: 100%;
-    max-width: 1400px;
-    margin:  0 auto;
+    padding: 0 60px;
     display: flex;
-    justify-content: space-between;
-    justify-items: center;
     align-items: center;
-    padding-top: 20px;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999999;
+    background-color: #101089;
+    height: 100px;
 }
 
 .main-search-header{

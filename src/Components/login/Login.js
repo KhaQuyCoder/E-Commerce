@@ -16,21 +16,27 @@ const Login = () => {
   const passRef = useRef();
   const handerSubmit = (e) => {
     e.preventDefault();
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPassValid = pass?.length > 6;
+
+    if (isEmailValid) {
       setCheckEmail(true);
       emailRef.current.style.borderColor = "";
     } else {
-      emailRef.current.style.borderColor = "#EF5350";
       setCheckEmail(false);
+      emailRef.current.style.borderColor = "#EF5350";
     }
-    if (pass?.length > 6) {
-      passRef.current.style.borderColor = "";
+
+    if (isPassValid) {
       setCheckPass(true);
+      passRef.current.style.borderColor = "";
     } else {
-      passRef.current.style.borderColor = "#EF5350";
       setCheckPass(false);
+      passRef.current.style.borderColor = "#EF5350";
     }
-    if (checkEmail && checkPass) {
+
+    if (isEmailValid && isPassValid) {
       setCheckLogin(true);
       navigate("/ListsHeart");
     }

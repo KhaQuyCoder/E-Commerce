@@ -1,0 +1,98 @@
+export const dataSale = [
+  {
+    id: 1,
+    name: "Osi Snack Trái Cây",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/9lysnJtbXV1EVKujPcZQ.png",
+    star: 4,
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    sale: "-8%",
+    weight: "12g",
+    description: "hello",
+  },
+  {
+    id: 2,
+    name: "Osi Snack Rong Biển",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/O1NXIbzJiBIR6GIbtrIa.png",
+    star: 4,
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    sale: "-7%",
+    weight: "12g",
+    description: "hello",
+  },
+  {
+    id: 3,
+    name: "Trà sữa taro trân châu",
+    image:
+      "https://i.pinimg.com/736x/bf/40/d6/bf40d64c45cfd067440e886dd1982657.jpg",
+    star: 5,
+    coin: "30.00vnd",
+    coinAfter: "19.000vnd",
+    weight: "12g",
+    sale: "-8%",
+    description: "hello",
+  },
+  {
+    id: 4,
+    name: "Trà sữa cam tươi",
+    image:
+      "https://i.pinimg.com/236x/e9/78/cb/e978cb076593974b53e2a4169ea6d846.jpg",
+    star: 4,
+    coin: "35.00vnd",
+    coinAfter: "22.000vnd",
+    sale: "-18%",
+    weight: "12g",
+    description: "hello",
+  },
+  {
+    id: 5,
+    name: "Osi Snack Trái Cây",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/9lysnJtbXV1EVKujPcZQ.png",
+    star: 4,
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    weight: "12g",
+    sale: "-8%",
+    description: "hello",
+  },
+  {
+    id: 6,
+    name: "Osi Snack Trái Cây",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/9lysnJtbXV1EVKujPcZQ.png",
+    star: 4,
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    weight: "12g",
+    sale: "-8%",
+    description: "hello",
+  },
+  {
+    id: 7,
+    name: "Osi Snack Trái Cây",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/9lysnJtbXV1EVKujPcZQ.png",
+    star: 4,
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    weight: "12g",
+    sale: "-8%",
+    description: "hello",
+  },
+  {
+    id: 8,
+    name: "Osi Snack Trái Cây",
+    image:
+      "https://oishi.cdn.vccloud.vn/storage/products/September2023/9lysnJtbXV1EVKujPcZQ.png",
+    star: 4,
+    description: "hello",
+    coin: "22.00vnd",
+    coinAfter: "12.000vnd",
+    sale: "-8%",
+    weight: "12g",
+  },
+];

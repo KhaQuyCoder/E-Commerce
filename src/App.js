@@ -14,6 +14,7 @@ import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import ViewProduct from "./pages/view/ViewProduct";
 import CheckOut from "./pages/checkouts/CheckOut";
+import BLOG from "./pages/blog/BLOG";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/Profile/Edit-Profile" element={<EditProfile />} />
             <Route path="/View/:id" element={<ViewProduct />} />
             <Route path="/CheckOut" element={<CheckOut />} />
+            <Route path="/BLOG" element={<BLOG />} />
           </Routes>
         </div>
       </Router>

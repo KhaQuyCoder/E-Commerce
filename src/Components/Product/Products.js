@@ -36,6 +36,7 @@ const Products = () => {
   ];
   return (
     <div className="container-product">
+      <h2>Đa dạng sản phẩm</h2>
       <div className="wraper-product">
         {product.map((item, index) => (
           <div key={index} className={item.clasN}>

@@ -20,9 +20,9 @@ function Header() {
       <div className="container-header-destop">
         <div className="wraper-container">
           <div className="header-search">
-            <div>
+            <Link to="/">
               <img src={logoHeader} alt="logo" />{" "}
-            </div>
+            </Link>
             <div className="main-search-header">
               <input
                 className="input-header"

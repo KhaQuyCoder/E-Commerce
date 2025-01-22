@@ -124,3 +124,7 @@ input[type="radio"]:hover {
     align-items: center;
     cursor: pointer;
   }
+.fa-x{
+    font-size: 7px;
+    margin-right: 3px;
+}

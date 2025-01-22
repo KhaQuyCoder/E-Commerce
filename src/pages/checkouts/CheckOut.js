@@ -99,29 +99,42 @@ const CheckOut = () => {
             <button className="btn-conform-buy">Xác nhận đặt hàng</button>
           </div>
           <div className="products-checkout">
-            {listCarts.map((item) => (
-              <div className="item-checkout">
-                <img
-                  className="image-product-checkout"
-                  src={item.imageItem}
-                  alt={item.nameItem}
-                />
-                <div>
-                  <p className="name-checkout">{item.nameItem}</p>
-                  <p className="coin-checkout">{item.coinItem}</p>
-                </div>
-                <p>{item.slItem}</p>
-                <p className="total-checkout">{Total(item)}</p>
-              </div>
-            ))}
+            <table className="wraper-heart">
+              <tr lassName="col-heart">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              {listCarts.map((item, index) => (
+                <tr className="row-heart">
+                  <td className="key">{index + 1}</td>
+                  <td>
+                    <img
+                      className="image-product-checkout"
+                      src={item.imageItem}
+                      alt={item.nameItem}
+                    />
+                  </td>
+                  <td className="name-checkout">{item.nameItem}</td>
+                  <td className="coin-checkout">{item.coinItem}</td>
+                  <td className="sl-checkout">
+                    <i class="fa-solid fa-x"></i>
+                    {item.slItem}
+                  </td>
+                  <td className="total-checkout">{Total(item)}</td>
+                </tr>
+              ))}
+            </table>
             <p className="footer-checkout">
               Tổng tiền hàng: <span>{TotalBill() + ".000vnd"}</span>
             </p>
             <p className="footer-checkout">
-              Phí vận chuyển:{" "}
+              Phí vận chuyển:
               <span>
                 {TotalBill() >= 400 ? "Miễn phí vận chuyển" : "20.000vnd"}
-                <i class="fa-solid fa-truck-fast"></i>
               </span>
             </p>
             <p className="footer-checkout">

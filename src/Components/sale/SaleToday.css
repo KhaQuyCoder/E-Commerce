@@ -1,0 +1,100 @@
+.container-saletoday{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
+.wraper-saletoday{
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+    transition: 0.3s linear;
+}
+
+.main-saletoday{
+    display: flex;
+    margin: 30px 20px 0 0;
+    border: 3px dashed #00A459;
+    padding: 20px;  
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.item-saletoday{
+    margin-left: 20px;
+    transform: translateX(20%);
+    width: 415px;
+}
+.hoursSale-saletoday{
+    display: flex;
+}
+.block-image-saletoday{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;align-items: center;
+    justify-content: center;
+    transform: translateX(40%);
+
+}
+.image-saletoday{
+    width: 230px;
+    height: 180px;
+    object-fit: contain;
+}
+.name-saletoday{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.coin-saletoday{
+    font-size: 1.2rem;
+    
+}
+.befor-coin{
+    margin-right: 10px;
+    color: #00A459;
+    font-weight: 500;
+}
+.after-coin{
+    color: grey;
+}
+.hours-saletoday{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.fa-star-saletoday{
+    font-size: 1.3rem;
+    color:#F7A92F;
+}
+.next-salertoday,.back-salertoday{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 999999px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;align-items: center;
+    justify-content: center;
+    cursor: pointer;;
+    top: 50%;
+}
+.next-salertoday{
+    left: 3%;
+    margin-left: -20px;
+}
+.back-salertoday{
+    right: 2%;
+}
+.time-saletoday{
+    font-weight: 700;
+}
